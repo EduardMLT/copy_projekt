@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AntonTy35.github.io/Project02-TASTY_FIX_TEAM",
+  "homepage": "https://EduardMLT.github.io/copy_projekt",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Project02-TASTY_FIX_TEAM/"
+    "build": "parcel build src/*.html --public-url /copy_projekt/"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "modern-normalize": "^1.1.0",
+    "pagination": "^0.4.6",
     "simplelightbox": "^2.14.1",
     "tui-pagination": "^3.4.1"
   },
