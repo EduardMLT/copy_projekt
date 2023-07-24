@@ -60,11 +60,7 @@ const lightbox_rec = new SimpleLightbox('.popular_on_recipes a', {
 });
 const popularAllRecipes = document.querySelector(".popular_all_recipes");
 console.log(2.0, popularAllRecipes); 
-const BASE_URL_ALL = 'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
-
-//  https://tasty-treats-backend.p.goit.global/api/recipes?page=1&limit=6  - всі рецепти
-// https://tasty-treats-backend.p.goit.global/api/recipes/popular - popular
-
+const BASE_URL_ALL = 'https://tasty-treats-backend.p.goit.global/api/recipes?page=1&limit=9';
 
 const getRecipesAll = () => axios.get(`${BASE_URL_ALL}`);
 
@@ -82,19 +78,19 @@ function renderPopularAllRecipes(response) {
 }
 
 function createAllRecipesGalleryCards(response) {
-  console.log(`2.3-  response: `, response.data[0].title);
+  console.log(`2.3-  response: `, response.data.results);
 //   let totalImages = users.total;
 //   onFetchSuccess(totalImages); щоб показать скільки карток ...
-  const markup = response.data
+  const markup = response.data.results
       .map((whatnot) => {
         // console.log(`3-  response: `, whatnot.preview);
-        return `<div class="popular_gallery_card">
-          <a class="popular_gallery_info" href="${whatnot.preview}">
-            <img class="popular_gallery_image" src="${whatnot.preview}" alt="${whatnot.title}" width="64" height="64">
+        return `<div class="all_gallery_card">
+          <a class="all_gallery_info" href="${whatnot.preview}">
+            <img class="all_gallery_image" src="${whatnot.preview}" alt="${whatnot.title}" width="132" height="132">
           </a>
-              <div class="popular_gallery_list">                 
-                 <p class="popular_gallery_list_item popular_gallery_list_item_title">${whatnot.title}</p>
-                 <p class="popular_gallery_list_item popular_gallery_list_item_description">${whatnot.description}</p>          
+              <div class="all_gallery_list">                 
+                 <p class="all_gallery_list_item_title">${whatnot.title}</p>
+                 <p class="popular_gallery_list_item_description">${whatnot.category}</p>          
               </div>          
         </div>`;
     })
