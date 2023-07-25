@@ -18,7 +18,7 @@ async function recipesFetch() {
       //   console.log(obj);
       console.log('obj.results', obj.results);
       recipes.innerHTML = recipesMarkup(obj.results);
-      recipes.insertAdjacentHTML('beforeend', recipesMarkup(obj.results));
+      // recipes.insertAdjacentHTML('beforeend', recipesMarkup(obj.results));
     })
     .catch(err => console.log(err));
 }
@@ -29,11 +29,11 @@ function recipesMarkup(arr) {
   return arr
     .map(
       ({ title, thumb }) => `<li>
-        <img src="${thumb}" alt="${title}" width="150">
+        <img src="${thumb}" alt="${title}" width="250">
         <button type="button">heart</button>
-        <h2>${title}</h2>
-        <p>description</p>
-        <p>rating</p>
+        <h2 class="recipes_title">${title}</h2>
+        <p class="recipes_description">description</p>
+        <p class="recipes_rating">rating</p>
         <button type="button">See recipe</button>
     </li>`
     )
