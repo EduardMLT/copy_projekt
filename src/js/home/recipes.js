@@ -53,7 +53,7 @@ const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
 
 async function recipesFetch() {
   // const markup =
-  return await fetch(`${BASE_URL}/recipes?limit=8`)
+  return await fetch(`${BASE_URL}/recipes?limit=9`)
     .then(res => {
       if (!res.ok) {
         throw new Error(res.status);

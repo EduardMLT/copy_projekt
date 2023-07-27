@@ -327,9 +327,9 @@ text-align: end;
     margin-left: 32px;
 }
 
-/* .popular_plus_recipes {
+.popular_plus_recipes {
     display: flex;
-} */
+}
 
 .popular_all_recipes {
     list-style: none;
